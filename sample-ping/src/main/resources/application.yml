@@ -1,0 +1,40 @@
+---
+server:
+  port: 8085
+
+samplepong:
+  ribbon:
+    DeploymentContextBasedVipAddresses: sample-pong
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    
+personalte:
+  ribbon:
+    DeploymentContextBasedVipAddresses: p-personal
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    
+filepath:
+  ribbon:
+    DeploymentContextBasedVipAddresses: s-file
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+
+samplepongdirect:
+  ribbon:
+    DeploymentContextBasedVipAddresses: sample-pong
+    listOfServers: localhost:8082
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    
+personaldirect:
+  ribbon:
+    DeploymentContextBasedVipAddresses: p-personal
+    listOfServers: localhost:8087
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    
+
+
+another:
+  key: anotherkeyvalue
